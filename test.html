@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="GallerySoft.info" />
+
+	<title>Untitled 1</title>
+</head>
+
+<body>
+
+<form enctype="multipart/form-data" action="processor/avatar.php" method="post"> 
+<!-- de upload duoc phai co enctype -->
+    <fieldset>
+		<!--
+        <legend>Avatar</legend>
+        -->
+		<div>
+            <!--
+            <img class="avatar" src="uploads/images/<?php echo (is_null($user['avatar']) ? "no_avatar.jpg" : $user['avatar']); ?>" alt="avatar" />
+            -->
+            <!--
+            <p>Please select a JPEG or PNG image of 512Kb or smaller to use as avatar<p> 
+            -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+            <!-- quy dinh do nang toi da cua file -->  
+          
+            <input type="file" name="image" />
+
+            <p><input class="change" type="submit" name="upload" value="Save changes" /></p>
+        </div>
+  </fieldset> 
+</form>
+
+</body>
+</html>
